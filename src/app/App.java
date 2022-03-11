@@ -9,6 +9,14 @@ Author: Pranav Rao
 Date: March 11, 2022
 
 LOCATIONS OF FULFILLED REQUIREMENTS:
+- Check button (listener and logic): app/GUI.java:96
+- Reset button (listener and logic): app/GUI.java:128
+- Quit button (listener and logic): app/GUI.java:136
+- User friendliness (error handling and messages): app/GUI.java:103
+- Doubly linked list: linkedList/LinkedList.java
+- Works on a word, numbers: test "rac3car"
+- Works on a sentence with punctuation, caps, spacing: test "Was it a rat I
+saw?"
 *******************************************************************************/
 
 package app; // this package is part of the app package
