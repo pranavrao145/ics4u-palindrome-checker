@@ -12,6 +12,8 @@ public class LinkedList {
     } else {
       node.setNext(this.head);
       this.head.setPrev(node);
+
+      this.head = node;
     }
 
     length++;

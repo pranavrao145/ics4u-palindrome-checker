@@ -8,7 +8,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import linkedList.LinkedList;
-import linkedList.Node;
 
 public class GUI {
 
@@ -45,11 +44,14 @@ public class GUI {
     textField_input.setColumns(10);
 
     textArea_output = new JTextArea();
+    textArea_output.setEditable(false);
     textArea_output.setBounds(10, 11, 422, 173);
 
     scrollPane_output = new JScrollPane(textArea_output);
     scrollPane_output.setBounds(10, 12, 424, 172);
     frame.getContentPane().add(scrollPane_output);
+
+    frame.setVisible(true);
   }
 
   private void attachListeners() {
@@ -61,12 +63,12 @@ public class GUI {
         if (text.equals("")) {
           textArea_output.append("No text to check!\n");
         } else {
-          LinkedList list = generateLinkedList(text);
+          LinkedList list = Engine.generateLinkedList(text);
 
-          if (checkPalindrome(list)) {
-            textArea_output.append(text + " is a palindrome.");
+          if (Engine.checkPalindrome(list)) {
+            textArea_output.append(text + " is a palindrome.\n");
           } else {
-            textArea_output.append(text + " is not a palindrome.");
+            textArea_output.append(text + " is not a palindrome.\n");
           }
         }
       }
@@ -80,43 +82,4 @@ public class GUI {
       }
     });
   }
-
-  private boolean checkPalindrome(LinkedList list) {
-    Node head = list.getHead(), tail = list.getTail();
-
-    // if the list is empty
-    if (head == null)
-      return false;
-
-    // if there's only one element in the linked list
-    if (head.equals(tail))
-      return true;
-
-    int maxChecks = list.getLength() / 2, currentChecks = 0;
-
-    while (currentChecks <= maxChecks) {
-      if (!(head.getData() == tail.getData()))
-        return false;
-
-      head = head.getNext();
-      tail = tail.getPrev();
-
-      currentChecks++;
-    }
-
-    return true;
-  }
-
-  private LinkedList generateLinkedList(String text) {
-    LinkedList list = new LinkedList();
-
-    for (int index = text.length() - 1; index >= 0; index--) {
-      Node letterNode = new Node(text.charAt(index));
-      list.addToHead(letterNode);
-    }
-
-    return list;
-  }
-
-  public JFrame getFrame() { return frame; }
 }
