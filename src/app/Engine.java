@@ -108,7 +108,7 @@ public class Engine {
         Node letterNode = new Node(lowerText.charAt(
             index)); // create a node with the character as the data
         list.addToHead(letterNode); // add the newly created node to the head of
-                                    // hte linked list
+                                    // the linked list
       }
     }
 
