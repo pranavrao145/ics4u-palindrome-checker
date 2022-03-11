@@ -33,7 +33,7 @@ public class GUI {
 
   private JFrame frame;
   private JTextField textField_input;
-  private JButton btn_reset, btn_check;
+  private JButton btn_reset, btn_check, btn_quit;
   private JTextArea textArea_output;
   private JScrollPane scrollPane_output;
 
@@ -61,11 +61,11 @@ public class GUI {
     frame.getContentPane().setLayout(null);
 
     btn_reset = new JButton("Reset");
-    btn_reset.setBounds(10, 231, 210, 27);
+    btn_reset.setBounds(148, 231, 147, 27);
     frame.getContentPane().add(btn_reset);
 
     btn_check = new JButton("Check");
-    btn_check.setBounds(224, 231, 210, 27);
+    btn_check.setBounds(297, 231, 137, 27);
     frame.getContentPane().add(btn_check);
 
     textField_input = new JTextField();
@@ -80,6 +80,10 @@ public class GUI {
     scrollPane_output = new JScrollPane(textArea_output);
     scrollPane_output.setBounds(10, 12, 424, 172);
     frame.getContentPane().add(scrollPane_output);
+
+    btn_quit = new JButton("Quit");
+    btn_quit.setBounds(10, 231, 137, 27);
+    frame.getContentPane().add(btn_quit);
   }
 
   /**
@@ -123,9 +127,16 @@ public class GUI {
     // input text field
     btn_reset.addActionListener(new ActionListener() {
       @Override
-      public void actionPerformed(final ActionEvent arg0) {
+      public void actionPerformed(final ActionEvent e) {
         textField_input.setText(""); // clear the text field
         textArea_output.setText(""); // clear the textarea
+      }
+    });
+
+    btn_quit.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(final ActionEvent e) {
+        System.exit(0);
       }
     });
   }
