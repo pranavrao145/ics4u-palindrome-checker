@@ -11,7 +11,7 @@ Date: March 11, 2022
 LOCATIONS OF FULFILLED REQUIREMENTS:
 *******************************************************************************/
 
-package app;
+package app; // this package is part of the app class
 
 import java.awt.EventQueue;
 
