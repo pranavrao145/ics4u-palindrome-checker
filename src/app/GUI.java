@@ -1,3 +1,15 @@
+/******************************************************************************
+Program: GUI (Palindrome Checker)
+
+Description: This is GUI for this app. This class contains all of the
+methods to run the GUI of the app, such as to draw and update the GUI,
+as well as to attach listeners.
+
+Author: Pranav Rao
+
+Date: March 11, 2022
+*******************************************************************************/
+
 package app;
 
 import java.awt.event.ActionEvent;

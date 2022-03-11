@@ -1,3 +1,15 @@
+/******************************************************************************
+Program: Engine Class (Palindrome Checker)
+
+Description: This is the engine for this app. This class contains all of the
+utility functionality for this app, including the methods to check the
+palindrome and generate a linked list from a string.
+
+Author: Pranav Rao
+
+Date: March 11, 2022
+*******************************************************************************/
+
 package app;
 
 import linkedList.LinkedList;
