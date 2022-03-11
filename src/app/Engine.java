@@ -10,7 +10,7 @@ Author: Pranav Rao
 Date: March 11, 2022
 *******************************************************************************/
 
-package app; // this package is part of the app class
+package app; // this package is part of the app package
 
 // import linked list classes  from linkedList package
 import linkedList.LinkedList;
