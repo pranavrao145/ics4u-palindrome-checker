@@ -25,18 +25,18 @@ public class Node {
    *
    * @param data - the data with which to make the new Node
    */
-  public Node(char data) { this.data = data; }
+  public Node(final char data) { this.data = data; }
 
   // getters and setters
   public int getData() { return data; }
 
-  public void setData(char data) { this.data = data; }
+  public void setData(final char data) { this.data = data; }
 
   public Node getPrev() { return prev; }
 
-  public void setPrev(Node prev) { this.prev = prev; }
+  public void setPrev(final Node prev) { this.prev = prev; }
 
   public Node getNext() { return next; }
 
-  public void setNext(Node next) { this.next = next; }
+  public void setNext(final Node next) { this.next = next; }
 }

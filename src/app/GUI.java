@@ -91,8 +91,8 @@ public class GUI {
     // the string given is a palindrome or not
     btn_check.addActionListener(new ActionListener() {
       @Override
-      public void actionPerformed(ActionEvent e) {
-        String text =
+      public void actionPerformed(final ActionEvent e) {
+        final String text =
             textField_input.getText(); // get the text from the text field
 
         if (text.equals("")) { // if the text is nothing (no text was entered)
@@ -100,7 +100,7 @@ public class GUI {
               "No text to check!\n"); // inform the user of the empty text field
                                       // in the textarea and do nothing else
         } else { // if there is text entered in the textarea
-          LinkedList list = Engine.generateLinkedList(
+          final LinkedList list = Engine.generateLinkedList(
               text); // generate a linked list from the text given
 
           // if the nodes of the linked list contain a palindrom
@@ -123,7 +123,7 @@ public class GUI {
     // input text field
     btn_reset.addActionListener(new ActionListener() {
       @Override
-      public void actionPerformed(ActionEvent arg0) {
+      public void actionPerformed(final ActionEvent arg0) {
         textField_input.setText(""); // clear the text field
         textArea_output.setText(""); // clear the textarea
       }

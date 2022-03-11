@@ -22,12 +22,12 @@ public class App {
    *
    * @param args - command line arguments for this program
    */
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     EventQueue.invokeLater(new Runnable() {
       public void run() {
         try {
           new GUI();
-        } catch (Exception e) {
+        } catch (final Exception e) {
           e.printStackTrace();
         }
       }

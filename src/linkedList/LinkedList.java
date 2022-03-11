@@ -25,11 +25,11 @@ public class LinkedList {
   }
 
   /**
-   * This function is used to add a given node to the head of the list.
+   * This method is used to add a given node to the head of the list.
    *
    * @param node - the node to add to the list
    */
-  public void addToHead(Node node) {
+  public void addToHead(final Node node) {
     if (this.head ==
         null) {         // if the current head is null (if the list is empty)
       this.head = node; // make this node the new head node of the list
@@ -70,9 +70,9 @@ public class LinkedList {
 
   public Node getHead() { return head; }
 
-  public void setHead(Node head) { this.head = head; }
+  public void setHead(final Node head) { this.head = head; }
 
   public int getLength() { return length; }
 
-  public void setLength(int length) { this.length = length; }
+  public void setLength(final int length) { this.length = length; }
 }

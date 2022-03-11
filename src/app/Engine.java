@@ -2,7 +2,7 @@
 Program: Engine Class (Palindrome Checker)
 
 Description: This is the engine for this app. This class contains all of the
-utility functionality for this app, including the methods to check the
+utility methodality for this app, including the methods to check the
 palindrome and generate a linked list from a string.
 
 Author: Pranav Rao
@@ -18,13 +18,13 @@ import linkedList.Node;
 
 public class Engine {
   /**
-   * This function checks if the given linked list contains nodes that form a
+   * This method checks if the given linked list contains nodes that form a
    * palindrome
    *
    * @param list - the list to check
    * @return false if the list does not contain a palindrome, true otherwise
    */
-  public static boolean checkPalindrome(LinkedList list) {
+  public static boolean checkPalindrome(final LinkedList list) {
     // get the head and the tail to being traversing through the list from
     // either end
     Node head = list.getHead(), tail = list.getTail();
@@ -52,7 +52,8 @@ public class Engine {
      */
 
     // calculate the max checks and intitialize the current checks at 0
-    int maxChecks = list.getLength() / 2, currentChecks = 0;
+    final int maxChecks = list.getLength() / 2;
+    int currentChecks = 0;
 
     // while we have not execeeded the max number of checks
     while (currentChecks <= maxChecks) {
@@ -80,32 +81,33 @@ public class Engine {
    * @param s - the string to check (will be a character in this case)
    * @return true if the string is special, else false
    */
-  private static boolean isSpecialCharacter(String s) {
+  private static boolean isSpecialCharacter(final String s) {
     return (s == null) ? false
                        : s.matches("[^A-Za-z0-9]"); // use regex to check the
                                                     // condition described above
   }
 
   /**
-   * This function takes a string and generates a linked list from it, with each
+   * This method takes a string and generates a linked list from it, with each
    * character in their own node.
    *
    * @param text - the string from which to generate the list
    * @return - the new linked list
    */
-  public static LinkedList generateLinkedList(String text) {
-    LinkedList list =
+  public static LinkedList generateLinkedList(final String text) {
+    final LinkedList list =
         new LinkedList(); // create a new blank linked list to populate
-    String lowerText = text.toLowerCase(); // make the text lowercase to prevent
-                                           // errors due to capitalization
+    final String lowerText =
+        text.toLowerCase(); // make the text lowercase to prevent
+                            // errors due to capitalization
 
     // traverse indexes of the string starting from the end and going to the
-    // beginning (backwards). This is because the linked list add function adds
+    // beginning (backwards). This is because the linked list add method adds
     // to the head, not to the tail (see linkedList/LinkedList class)
     for (int index = text.length() - 1; index >= 0; index--) {
       // if the character at the current index is NOT a specical character
       if (!isSpecialCharacter(String.valueOf(text.charAt(index)))) {
-        Node letterNode = new Node(lowerText.charAt(
+        final Node letterNode = new Node(lowerText.charAt(
             index)); // create a node with the character as the data
         list.addToHead(letterNode); // add the newly created node to the head of
                                     // the linked list
