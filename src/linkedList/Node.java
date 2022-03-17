@@ -20,12 +20,16 @@ public class Node {
 
   /**
    * Constructor method - this method is called when an object of this class
-   * is made. This constructor takes a parameter for each of the
-   * available attributes.
+   * is made. This constructor takes a parameter for the data attribute and
+   * sets defaults for the rest.
    *
    * @param data - the data with which to make the new Node
    */
-  public Node(final char data) { this.data = data; }
+  public Node(final char data) {
+    this.data = data;
+    this.prev = null;
+    this.next = null;
+  }
 
   // getters and setters
   public int getData() { return data; }

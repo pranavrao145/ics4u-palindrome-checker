@@ -10,8 +10,8 @@ Date: March 11, 2022
 
 LOCATIONS OF FULFILLED REQUIREMENTS:
 - Check button (listener and logic): app/GUI.java:96
-- Reset button (listener and logic): app/GUI.java:128
-- Quit button (listener and logic): app/GUI.java:136
+- Reset button (listener and logic): app/GUI.java:131
+- Quit button (listener and logic): app/GUI.java:139
 - User friendliness (error handling and messages): app/GUI.java:103
 - Doubly linked list: linkedList/LinkedList.java
 - Works on a word, numbers: test "rac3car"

@@ -21,7 +21,7 @@ public class LinkedList {
    * is made. This constructor takes no parameters.
    */
   public LinkedList() {
-    length = 0; // initialize the length of the new list to 0
+    this.length = 0; // initialize the length of the new list to 0
   }
 
   /**

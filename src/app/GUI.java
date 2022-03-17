@@ -119,6 +119,9 @@ public class GUI {
                 " is not a palindrome.\n"); // inform the user that the string
                                             // is a palindrome via the textarea
           }
+
+          textField_input.setText(
+              ""); // set the text back to empty in the input box
         }
       }
     });
